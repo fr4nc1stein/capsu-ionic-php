@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Info
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
 
-<ion-content></ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Capiz State University - {{name}}</ion-card-title>
+      <ion-card-subtitle>Center of Academic Excellence Delivering Qualify Service to All</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      The Capiz State University (CAPSU) primarily provides advance instruction and professional training in agriculture, 
+      fishery and forestry, science and technology, arts and humanities, education and other related fields. 
+      It shall also undertake research, extension services and production activities and provide progressive 
+      leadership in its areas of specialization.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input placeholder="Enter Input"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Campus</ion-label>
+    <ion-input placeholder="Enter Input" value="{{name}}" disabled="true"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Couse</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="bscs">BSCS</ion-select-option>
+      <ion-select-option value="bsoa">BSOA</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

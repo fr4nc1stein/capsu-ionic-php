@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { TabsPage } from './tabs.page';
+import { Tab3Page } from '../tab3/tab3.page';
 
 const routes: Routes = [
   {
@@ -35,10 +37,14 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'school/:id',
+        component: Tab3Page
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
-      }
+      },
     ]
   },
   {

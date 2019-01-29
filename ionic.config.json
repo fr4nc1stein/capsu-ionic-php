@@ -1,6 +1,8 @@
 {
   "name": "capsuMap",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "ff1c5dfc"
 }
