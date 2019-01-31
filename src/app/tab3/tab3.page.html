@@ -9,32 +9,50 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Capiz State University - {{name}}</ion-card-title>
+      <ion-card-title>Capiz State University</ion-card-title>
       <ion-card-subtitle>Center of Academic Excellence Delivering Qualify Service to All</ion-card-subtitle>
     </ion-card-header>
-  
+
     <ion-card-content>
-      The Capiz State University (CAPSU) primarily provides advance instruction and professional training in agriculture, 
-      fishery and forestry, science and technology, arts and humanities, education and other related fields. 
-      It shall also undertake research, extension services and production activities and provide progressive 
-      leadership in its areas of specialization.
+        Campus - {{name}}
     </ion-card-content>
   </ion-card>
+  
+  <form [formGroup]="infoForm" >
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input placeholder="Enter Input" formControlName="full_name" ></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label>Name</ion-label>
-    <ion-input placeholder="Enter Input"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Campus</ion-label>
-    <ion-input placeholder="Enter Input" value="{{name}}" disabled="true"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Couse</ion-label>
-    <ion-select placeholder="Select One">
-      <ion-select-option value="bscs">BSCS</ion-select-option>
-      <ion-select-option value="bsoa">BSOA</ion-select-option>
-    </ion-select>
-  </ion-item>
+      <ion-item>
+        <ion-label>Campus</ion-label>
+        <ion-input name="campus" placeholder="Enter Input" value="{{name}}" disabled="true" formControlName="campus"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label>Course</ion-label>
+        <ion-select formControlName="course" placeholder="Select One">
+          <ion-select-option value="bscs">BSCS</ion-select-option>
+          <ion-select-option value="bsoa">BSOA</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label><b> Profile </b></ion-label>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Birthday</ion-label>
+          <ion-datetime formControlName="birthday" displayFormat="MMMM DD YYYY" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Address</ion-label>
+          <ion-input formControlName="address" placeholder="Enter Input"></ion-input>
+        </ion-item>
+        
+
+        <ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveInfo()">Save</ion-button>
+  </form>
 </ion-content>
