@@ -44,7 +44,7 @@ export class Tab3Page {
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json' );
     const requestOptions = new RequestOptions({ headers: headers });
-
+    console.log(JSON.stringify(this.infoForm.value));
     this.http.post('http://127.0.0.1/capsu/', JSON.stringify(this.infoForm.value), requestOptions)
     .subscribe(data => {
       const response = data['_body'];
